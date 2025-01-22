@@ -5,7 +5,7 @@ import SkillCard from "./SKillCard";
 
 function Skills() {
   return (
-    <section id="skills" className="w-full bg-yellow-400">
+    <section id="skills" className="bg-yellow-400">
       <div className="mx-auto max-w-7xl px-[1.5rem] py-[4rem] text-black">
         <LinkSection label="SKILLS" linkTo="skills" borderColor="#111" />
         <div className="flex w-full flex-col gap-10 rounded-3xl bg-white/80 p-6 shadow-xl md:gap-8 md:p-8">

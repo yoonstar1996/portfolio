@@ -5,7 +5,7 @@ import LinkSection from "../common/LinkSection";
 
 function AboutMe() {
   return (
-    <section id="about" className="w-full bg-white">
+    <section id="about" className="bg-white">
       <div className="mx-auto max-w-7xl px-[1.5rem] py-[4rem] text-black">
         <LinkSection label="ABOUT ME" linkTo="about" />
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">

@@ -25,7 +25,7 @@ function LinkSection({
         className="text-gray-600 opacity-50 hover:cursor-pointer hover:opacity-100"
       />
       <h3
-        className="border-b-[1px] pb-2 text-[44px] font-black"
+        className="border-b-[1px] text-[44px] font-black"
         style={{ borderColor, color: textColor }}
       >
         {label}
