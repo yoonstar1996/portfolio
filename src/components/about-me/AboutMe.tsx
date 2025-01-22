@@ -18,11 +18,11 @@ function AboutMe() {
             value="yagobo1110@naver.com"
             Icon={Mail}
           />
-          <IntroduceCard
+          {/* <IntroduceCard
             label="학력"
             value="경민대학교(세무회계과)"
             Icon={Pencil}
-          />
+          /> */}
         </div>
       </div>
     </section>
