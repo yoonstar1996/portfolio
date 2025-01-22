@@ -6,18 +6,18 @@ import ImageButton from "./ImageButton";
 
 function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="flex flex-col rounded-2xl p-[2rem] shadow-lg">
+    <div className="flex flex-col rounded-2xl p-[2rem] shadow-custom">
       {/* 이름 */}
       <h4
-        className="mb-2 self-start rounded-lg px-2 py-1 font-bold text-white"
+        className="mb-2 self-start rounded-lg px-3 py-2 font-bold text-white"
         style={{
-          backgroundColor: project.isImportant ? "#14b8a6 " : "#6c757d",
+          backgroundColor: project.isImportant ? "#1492b8 " : "#6c757d",
         }}
       >
         {project.title}
       </h4>
       {/* 진행날짜 */}
-      <div className="mb-2 border-b-[1px] pb-2 text-sm text-[#6c757d]">
+      <div className="mb-2 border-b-[1px] pb-2 text-sm text-subTextColor">
         {project.subTitle}
       </div>
       {/* 프로젝트 설명 */}
@@ -26,8 +26,8 @@ function ProjectCard({ project }: ProjectCardProps) {
       </div>
       {/* 링크 */}
       {project.url && (
-        <div className="mb-4 flex items-center gap-4">
-          <div className="w-[50px]">URL</div>
+        <div className="mb-4 flex items-center gap-2 break-keep lg:gap-4">
+          <div className="w-[46px]">URL</div>
           <div className="border-l-4 border-blue-500 pl-3">
             <Link
               href={project.url}
@@ -39,8 +39,8 @@ function ProjectCard({ project }: ProjectCardProps) {
           </div>
         </div>
       )}
-      <div className="mb-4 flex items-center gap-4">
-        <div className="w-[50px]">Github</div>
+      <div className="mb-4 flex items-center gap-2 break-keep lg:gap-4">
+        <div className="w-[46px]">Github</div>
         <div className="border-l-4 border-[#0d1117] pl-3">
           <Link
             href={project.github}

@@ -72,6 +72,7 @@ function Nav() {
             onClick={() => scrollToSection("projects")}
             text="Projects"
           />
+          <NavButton onClick={() => scrollToSection("career")} text="Careers" />
         </nav>
       </div>
       <div
@@ -111,6 +112,14 @@ function Nav() {
               setIsOpened(false);
             }}
             text="Projects"
+          />
+          <NavButton
+            className="py-3"
+            onClick={() => {
+              scrollToSection("career");
+              setIsOpened(false);
+            }}
+            text="Career"
           />
         </nav>
       </div>

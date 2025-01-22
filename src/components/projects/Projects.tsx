@@ -5,9 +5,15 @@ import LinkSection from "../common/LinkSection";
 import Label from "./Label";
 import ProjectCard from "./ProjectCard";
 import {
+  BeermodeProject,
   CelebstarsProject,
+  ChatProject,
+  DingonProject,
   EmotionProject,
+  PortfolioDemoProject,
   PortfolioProject,
+  SgtProject,
+  StarbucksProject,
   WattsUpProject,
 } from "@/data/ProjectData";
 import { useCheckStore } from "@/store/useCheckStore";
@@ -19,7 +25,13 @@ function Projects() {
     PortfolioProject,
     WattsUpProject,
     EmotionProject,
+    PortfolioDemoProject,
     CelebstarsProject,
+    DingonProject,
+    SgtProject,
+    ChatProject,
+    BeermodeProject,
+    StarbucksProject,
   ].filter((project) => !isChecked || project.isImportant);
 
   return (
