@@ -7,7 +7,7 @@ function MoreViewButton() {
   return (
     <button
       onClick={() => scrollToSection("about")}
-      className="rounded-md bg-teal-500 py-[1rem] px-[2rem]"
+      className="rounded-md bg-mainColor px-[2rem] py-[1rem]"
     >
       더 알아보기 ↓
     </button>

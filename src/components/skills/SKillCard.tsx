@@ -15,17 +15,17 @@ interface SkillCardProps {
 
 function SkillCard({ labels, text, imgSrc }: SkillCardProps) {
   return (
-    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 md:gap-[2rem] w-full">
-      <div className="flex gap-[1rem] items-center w-full sm:w-40">
+    <div className="flex w-full flex-col items-start gap-4 sm:flex-row sm:items-center md:gap-[2rem]">
+      <div className="flex w-full items-center gap-[1rem] sm:w-40">
         <Image src={imgSrc} width={32} height={32} alt="skill-image" />
-        <div className="font-semibold text-lg">{text}</div>
+        <div className="text-lg font-semibold">{text}</div>
       </div>
 
-      <ul className="flex flex-wrap justify-start gap-[0.5rem] w-full">
+      <ul className="flex w-full flex-wrap justify-start gap-[0.5rem]">
         {labels.map((item) => (
           <li
             key={item.name}
-            className="px-3 py-1 rounded-lg font-medium text-sm md:text-base"
+            className="rounded-lg px-3 py-1 text-sm font-medium md:text-base"
             style={{ color: item.textColor, backgroundColor: item.bgColor }}
           >
             {item.name}
