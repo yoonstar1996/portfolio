@@ -16,7 +16,7 @@ function ArchivingCard({ imgSrc, alt, label, desc }: ArchivingCardProps) {
       className="group w-full max-w-[26rem] rounded-2xl bg-[#f5f5f5] p-[2rem] transition-transform duration-200 ease-linear hover:scale-105 hover:cursor-pointer"
     >
       <div className="mb-4">
-        <img src={imgSrc} alt={alt} className="h-[60px] w-[70%]" />
+        <img src={imgSrc} alt={alt} className="h-auto w-full" />
       </div>
       <div className="mb-4 text-blue-500 group-hover:underline group-hover:decoration-blue-500">
         {label}

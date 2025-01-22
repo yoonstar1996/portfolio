@@ -1,22 +1,8 @@
-import { Image } from "lucide-react";
-import Link from "next/link";
 import React from "react";
-import ProjectButton from "./ProjectButton";
-
-interface Project {
-  isImportant: boolean;
-  title: string;
-  subTitle: string;
-  desc: string;
-  func: string[];
-  url: string;
-  skills: string;
-  hasImage: boolean;
-}
-
-interface ProjectCardProps {
-  project: Project;
-}
+import Link from "next/link";
+import ReadMeButton from "./ReadMeButton";
+import { ProjectCardProps } from "@/type/Project";
+import ImageButton from "./ImageButton";
 
 function ProjectCard({ project }: ProjectCardProps) {
   return (
@@ -37,23 +23,33 @@ function ProjectCard({ project }: ProjectCardProps) {
       {/* 프로젝트 설명 */}
       <div className="mb-4 break-keep">
         <h5 className="mb-2 font-bold">{project.desc}</h5>
-        <ul>
-          {project.func.map((item, index) => (
-            <li key={`${item} - ${index + 1}`} className="text-sm">
-              {item}
-            </li>
-          ))}
-        </ul>
       </div>
       {/* 링크 */}
-      <div className="mb-4 border-l-4 border-blue-500 pl-3">
-        <Link
-          href={project.url}
-          target="_blank"
-          className="text-blue-500 hover:cursor-pointer hover:underline"
-        >
-          {project.url}
-        </Link>
+      {project.url && (
+        <div className="mb-4 flex items-center gap-4">
+          <div className="w-[50px]">URL</div>
+          <div className="border-l-4 border-blue-500 pl-3">
+            <Link
+              href={project.url}
+              target="_blank"
+              className="text-blue-500 hover:cursor-pointer hover:underline"
+            >
+              {project.url}
+            </Link>
+          </div>
+        </div>
+      )}
+      <div className="mb-4 flex items-center gap-4">
+        <div className="w-[50px]">Github</div>
+        <div className="border-l-4 border-[#0d1117] pl-3">
+          <Link
+            href={project.github}
+            target="_blank"
+            className="text-[#0d1117] hover:cursor-pointer hover:underline"
+          >
+            {project.github}
+          </Link>
+        </div>
       </div>
       {/* 기술 */}
       <div className="mb-4 self-start break-keep rounded-lg border border-yellow-500 bg-amber-100 px-3 py-1 text-sm">
@@ -61,8 +57,10 @@ function ProjectCard({ project }: ProjectCardProps) {
       </div>
       {/* README */}
       <div className="flex gap-2">
-        <ProjectButton />
-        {project.hasImage && <ProjectButton label="이미지" Icon={Image} />}
+        <ReadMeButton project={project} />
+        {project.hasImage && project.imgSrc && (
+          <ImageButton images={project.imgSrc} />
+        )}
       </div>
     </div>
   );

@@ -4,15 +4,23 @@ import React from "react";
 import LinkSection from "../common/LinkSection";
 import Label from "./Label";
 import ProjectCard from "./ProjectCard";
-import { PortfolioProject, WattsUpProject } from "@/data/ProjectData";
+import {
+  CelebstarsProject,
+  EmotionProject,
+  PortfolioProject,
+  WattsUpProject,
+} from "@/data/ProjectData";
 import { useCheckStore } from "@/store/useCheckStore";
 
 function Projects() {
   const isChecked = useCheckStore((state) => state.isChecked);
 
-  const projectList = [PortfolioProject, WattsUpProject].filter(
-    (project) => !isChecked || project.isImportant,
-  );
+  const projectList = [
+    PortfolioProject,
+    WattsUpProject,
+    EmotionProject,
+    CelebstarsProject,
+  ].filter((project) => !isChecked || project.isImportant);
 
   return (
     <section id="projects" className="bg-[#f5f5f5]">
