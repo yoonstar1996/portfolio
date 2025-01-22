@@ -3,7 +3,7 @@ export const PortfolioProject = {
   title: "포트폴리오 웹사이트 (App router)",
   subTitle: "2025.01 (1인 프로젝트)",
   desc: "기존 포트폴리오 웹사이트를 App router로 마이그레이션 했습니다.",
-  url: "#",
+  url: "https://portfolio-tau-lime-32.vercel.app",
   github: "https://github.com/yoonstar1996/portfolio",
   skills: "Next.js, Typescript, Tailwind.css, Zustand",
   func: [
