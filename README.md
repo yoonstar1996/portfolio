@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+---
+# 서비스 간단 소개
 
-## Getting Started
+* **기존 포트폴리오 웹사이트를 App router로 마이그레이션 했습니다.**
 
-First, run the development server:
+## Portfolio
+* 포트폴리오 프로젝트
+* 2025.01 ~ 2025.01
+* 사용 기술 : Next.js, Typescript, tailwind.css, zustand
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 제작 인원(1명)
+* 윤경민
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 주요 기능
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> Front : (윤경민)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Page Router 기반의 프로젝트를 App Router로 마이그레이션**
+- **간단한 자기소개, 인적 사항, 기술 스택, 깃허브/블로그, 프로젝트 경험, 경력**
+- **README 클릭 시, 마크다운 형식으로 볼 수 있도록 제작**
+- **이미지 클릭 시, 캐러셀 형식으로 볼 수 있도록 제작**
+- **반응형 css 구축**
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    
+* 노션 링크 : https://www.notion.so/Portfolio-c92ad3a1bb0e40cf8f4e91e83ee805dc
+* 실제 링크 : https://portfolio-tau-lime-32.vercel.app
