@@ -26,26 +26,27 @@ function ProjectCard({ project }: ProjectCardProps) {
       </div>
       {/* 링크 */}
       {project.url && (
-        <div className="mb-4 flex items-center gap-2 break-keep lg:gap-4">
-          <div className="w-[46px]">URL</div>
+        <div className="mb-4 flex items-center gap-2 lg:gap-4">
+          <div className="min-w-[46px]">URL</div>
           <div className="border-l-4 border-blue-500 pl-3">
             <Link
               href={project.url}
               target="_blank"
-              className="text-blue-500 hover:cursor-pointer hover:underline"
+              className="break-words text-blue-500 hover:cursor-pointer hover:underline"
             >
               {project.url}
             </Link>
           </div>
         </div>
       )}
-      <div className="mb-4 flex items-center gap-2 break-keep lg:gap-4">
-        <div className="w-[46px]">Github</div>
+      <div className="mb-4 flex items-center gap-2 lg:gap-4">
+        <div className="min-w-[46px]">Github</div>
         <div className="border-l-4 border-[#0d1117] pl-3">
           <Link
             href={project.github}
             target="_blank"
-            className="text-[#0d1117] hover:cursor-pointer hover:underline"
+            className="break-words text-[#0d1117] hover:cursor-pointer hover:underline"
+            style={{ overflowWrap: "anywhere" }}
           >
             {project.github}
           </Link>
