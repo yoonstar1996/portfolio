@@ -56,7 +56,7 @@ function ImageButton({ images }: ImageButtonProps) {
                   <Card>
                     <CardContent className="flex aspect-square items-center justify-center p-6">
                       <img
-                        src={`/images${imgSrc}`}
+                        src={`/public/images${imgSrc}`}
                         alt={`carousel-img-${index}`}
                         className="h-auto w-full rounded-lg shadow-md"
                       />
