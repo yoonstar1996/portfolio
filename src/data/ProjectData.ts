@@ -3,7 +3,7 @@ export const PortfolioProject = {
   title: "포트폴리오 웹사이트 (App router)",
   subTitle: "2025.01 (1인 프로젝트)",
   desc: "기존 포트폴리오 웹사이트를 App router로 마이그레이션 했습니다.",
-  url: "https://portfolio-tau-lime-32.vercel.app",
+  url: "https://portfolio-five-beryl-94.vercel.app/",
   github: "https://github.com/yoonstar1996/portfolio",
   skills: "Next.js, Typescript, Tailwind.css, Zustand",
   func: [
@@ -91,6 +91,7 @@ export const PortfolioDemoProject = {
   title: "포트폴리오 웹사이트 (Page router)",
   subTitle: "2023.11 ~ 2023.12 (1인 프로젝트)",
   desc: "포트폴리오를 정리하여 제작한 웹사이트 입니다.",
+  url: "https://portfolio-tau-lime-32.vercel.app",
   github: "https://github.com/yoonstar1996/portfolio-demo",
   skills: "Next.js, TypeScript, styled-components",
   func: ["간단한 자기소개", "인적 사항", "기술 스택", "프로젝트 경험"],
