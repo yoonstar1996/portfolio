@@ -11,6 +11,7 @@ export const PortfolioProject = {
     "@Page Router 기반의 프로젝트를 App Router로 마이그레이션",
     "@간단한 자기소개, 인적 사항, 기술 스택, 깃허브/블로그, 프로젝트 경험, 경력",
     "@README 클릭시, 마크다운 형식으로 볼 수 있도록 제작",
+    "@이미지지 클릭시, 캐러셀 형식으로 볼 수 있도록 제작",
     "@반응형 css 구축",
   ],
   hasImage: false,
