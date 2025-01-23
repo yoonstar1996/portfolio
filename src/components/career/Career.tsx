@@ -7,13 +7,13 @@ function Career() {
       <div className="mx-auto max-w-7xl px-[1.5rem] py-[4rem] text-black">
         <LinkSection label="CAREER" linkTo="career" />
         <div className="flex flex-col">
-          <div className="flex">
-            <div className="border-r-[1px] border-r-[#ccc] pr-[3rem]">
+          <div className="flex flex-col items-center lg:flex-row">
+            <div className="border-b-0 border-[#ccc] lg:border-r-[1px] lg:pr-[3rem]">
               <div className="flex h-[15rem] w-[15rem] items-center justify-center rounded-full border border-[#ccc] bg-white p-3">
                 <img src="/images/career/celeb-logo.png" alt="celeb-logo" />
               </div>
             </div>
-            <div className="pb-[2rem] pl-[3rem]">
+            <div className="mt-[2rem] pb-[2rem] pl-[3rem] lg:mt-0">
               <h4 className="pb-2 text-2xl font-black">(주) 셀럽스타즈</h4>
               <div className="pb-[1rem] text-subTextColor">
                 2023.03 ~ 2023.08 (인턴)

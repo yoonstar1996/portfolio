@@ -13,7 +13,7 @@ function ArchivingCard({ imgSrc, alt, label, desc }: ArchivingCardProps) {
     <Link
       href={label}
       target="_blank"
-      className="group w-full max-w-[26rem] rounded-2xl bg-[#f5f5f5] p-[2rem] transition-transform duration-200 ease-linear hover:scale-105 hover:cursor-pointer"
+      className="group w-full max-w-[26rem] break-words rounded-2xl bg-[#f5f5f5] p-[2rem] transition-transform duration-200 ease-linear hover:scale-105 hover:cursor-pointer"
     >
       <div className="mb-4">
         <img src={imgSrc} alt={alt} className="h-auto w-full" />
