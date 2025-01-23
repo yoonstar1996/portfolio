@@ -33,6 +33,7 @@ function ProjectCard({ project }: ProjectCardProps) {
               href={project.url}
               target="_blank"
               className="break-words text-blue-500 hover:cursor-pointer hover:underline"
+              style={{ overflowWrap: "anywhere" }}
             >
               {project.url}
             </Link>
