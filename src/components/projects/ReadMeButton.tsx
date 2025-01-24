@@ -122,7 +122,7 @@ const SubDesc = ({ children }: { children: React.ReactNode }) => (
 const ProjectImage = ({ src, alt }: { src: string; alt: string }) => (
   <div className="my-4 flex justify-start">
     <img
-      src={`/public/images/${src}`}
+      src={`/images/${src}`}
       alt={alt}
       className="max-w-md rounded-md shadow-lg"
     />
