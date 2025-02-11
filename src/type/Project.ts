@@ -9,6 +9,7 @@ export interface Project {
   func: string[];
   hasImage: boolean;
   imgSrc?: string[];
+  review?: string;
 }
 
 export interface ProjectCardProps {
