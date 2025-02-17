@@ -67,12 +67,21 @@ function ReadMeButton({ project }: ReadMeButtonProps) {
             </div>
 
             {/* 기술 스택 */}
-            <h2 className="mb-5 text-xl font-bold">🛠️ 기술 스택</h2>
+            <h2 className="text-xl font-bold">🛠️ 기술 스택</h2>
             <div className="mb-5 self-start break-keep px-3 py-1 text-sm">
               {project.skills}
             </div>
 
-            {/* 설치 및 실행 방법 */}
+            {project.review && (
+              <>
+                <h2 className="mt-6 text-xl font-bold">📝 프로젝트 리뷰</h2>
+                <div className="mt-3 whitespace-pre-line rounded-lg bg-[#f5f5f5] p-4 text-gray-700">
+                  {project.review}
+                </div>
+              </>
+            )}
+
+            {/* 설치 및 실행 방법
             <h2 className="mb-5 text-xl font-bold">
               ⚙️ 프로젝트 설치 및 실행 방법
             </h2>
@@ -87,7 +96,7 @@ function ReadMeButton({ project }: ReadMeButtonProps) {
                 <br />
                 npm run dev
               </code>
-            </pre>
+            </pre> */}
           </article>
         </div>
       </DialogContent>
@@ -98,7 +107,7 @@ function ReadMeButton({ project }: ReadMeButtonProps) {
 export default ReadMeButton;
 
 const MainTitle = ({ children }: { children: React.ReactNode }) => (
-  <h2 className="mt-5 text-xl font-bold text-black before:mr-2 before:content-['•']">
+  <h2 className="mt-3 text-xl font-bold text-black before:mr-2 before:content-['•']">
     {children}
   </h2>
 );

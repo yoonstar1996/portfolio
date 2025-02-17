@@ -22,27 +22,31 @@ export const WattsUpProject = {
   title: "VPP 대시보드 및 전력 거래소 구축",
   subTitle: "2024.12 ~ 2025.01 (5인 프로젝트 / 팀장)",
   desc: "VPP 대시보드 및 전력 거래소 구축",
-  url: "https://watts-up-n9ow.vercel.app",
-  github: "https://github.com/Defor721/WattsUp",
+  url: "https://watts-up-five.vercel.app/",
+  github: "https://github.com/yoonstar1996/WattsUp",
   skills: "Next.js, Typescript, Tailwind.css, Zustand, tensorflow.js, recharts",
   func: [
     "메인 페이지",
     "@tensorflow.js를 이용해 태양광 발전량 예측 시스템 구축",
     "@recharts를 이용해 예측량 시각화",
-    "/projects/portfolio/dashboard.png",
+    "/projects/wattsup/dashboard.png",
     "@모든 페이지 태블릿, pc 크기의 반응형 css 구축",
     "@다크모드/라이트모드 구축",
-    "/projects/portfolio/dashboard-dark.png",
+    "/projects/wattsup/dashboard-dark.png",
     "관리자 페이지",
     "@회원가입된 사용자 리스트 페이지네이션",
+    "/projects/wattsup/user-info.png",
     "@프로젝트 내의 거래 관련 데이터 제공",
     "@지역별 발전량 제공",
     "@프로젝트 내의 거래 내역 페이지네이션",
+    "/projects/wattsup/data-info.png",
   ],
   hasImage: true,
   imgSrc: [
-    "/projects/portfolio/dashboard.png",
-    "/projects/portfolio/dashboard-dark.png",
+    "/projects/wattsup/dashboard.png",
+    "/projects/wattsup/dashboard-dark.png",
+    "/projects/wattsup/user-info.png",
+    "/projects/wattsup/data-info.png",
   ],
 };
 
@@ -269,6 +273,7 @@ export const SgtProject = {
     "/projects/sgt/sgt-mediaquery.gif",
     "/projects/sgt/sgt-search.gif",
   ],
+  review: "",
 };
 
 export const ChatProject = {
