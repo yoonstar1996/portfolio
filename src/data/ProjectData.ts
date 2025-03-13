@@ -50,46 +50,6 @@ export const WattsUpProject = {
   ],
 };
 
-export const EmotionProject = {
-  isImportant: false,
-  title: "나만의 감정 일기장",
-  subTitle: "2024.08 ~ 2024.08 (1인 프로젝트)",
-  desc: "나만의 감정 일기장을 만들어 보았습니다.",
-  url: "https://emotion-diary-sandy-pi.vercel.app/",
-  github:
-    "https://github.com/yoonstar1996/self-study/tree/main/udemy/react/onbite-react/emotion-diary",
-  skills: "React",
-  func: [
-    "메인 페이지",
-    "@헤더의 양쪽 버튼을 클릭하여, 다른 날짜로 이동",
-    "@최신순, 오래된 순으로 필터링 가능",
-    "@새 일기 쓰기 버튼 클릭 시, 일기 쓰는 페이지로 이동",
-    "/projects/emotionDiary/emotion-diary-main.png",
-    "New 페이지",
-    "@날짜, 감정, 일기를 입력",
-    "@뒤로 가기 버튼 클릭 시, nav(-1)",
-    "@취소 하기 버튼 클릭 시, 메인 페이지로 이동",
-    "@작성 완료 버튼 클릭 시, localStorage에 저장 후, 메인 페이지로 이동",
-    "/projects/emotionDiary/emotion-diary-create.png",
-    "Edit 페이지",
-    "@해당 데이터를 불러와 날짜, 감정, 일기가 입력되어 있는 상태로 불러온다.",
-    "@삭제 하기 버튼 클릭 시, 확인하는 팝업을 띄운 후, 확인을 클릭해야 삭제",
-    "@다른 기능들은 새 일기 작성하는 것과 똑같은 로직",
-    "/projects/emotionDiary/emotion-diary-update.png",
-    "Diary 페이지",
-    "@해당 날짜의 일기를 상세하게 볼 수 있는 페이지",
-    "@수정 하기 버튼 클릭 시, Edit페이지로 이동",
-    "/projects/emotionDiary/emotion-diary-detail.png",
-  ],
-  hasImage: true,
-  imgSrc: [
-    "/projects/emotionDiary/emotion-diary-main.png",
-    "/projects/emotionDiary/emotion-diary-create.png",
-    "/projects/emotionDiary/emotion-diary-update.png",
-    "/projects/emotionDiary/emotion-diary-detail.png",
-  ],
-};
-
 export const PortfolioDemoProject = {
   isImportant: true,
   title: "포트폴리오 웹사이트 (Page router)",
@@ -328,32 +288,5 @@ export const BeermodeProject = {
     "/projects/beermode/beermode-Info.gif",
     "/projects/beermode/beermode-scroll.gif",
     "/projects/beermode/beermode-like.gif",
-  ],
-};
-
-export const StarbucksProject = {
-  isImportant: false,
-  title: "STARBUCKS 클론코딩",
-  subTitle: "2022.12 ~ 2023.01 (1인 프로젝트)",
-  desc: "HTML, CSS, JS를 이용한 클론 프로젝트입니다.",
-  github:
-    "https://github.com/yoonstar1996/self-study/tree/main/fastcampus/FrontEnd-start/Part1/starbucks",
-  skills: "HTML, CSS, Javascript",
-  func: [
-    "GSAP & ScrollToPlugin 라이브러리을 이용하여 스크롤 위치에 따른 오른쪽 배지 & 버튼 변화 ",
-    "/projects/starbucks/sb-scroll_to_top.gif",
-    "SWIPER 라이브러리를 이용하여 이미지 슬라이드를 간편하게 제작.",
-    "/projects/starbucks/sb-slide_img.gif",
-    "유튜브 동영상 자동, 반복재생",
-    "/projects/starbucks/sb-youtube_video.gif",
-    "ScrollMagic 라이브러리를 이용하여 스크롤 감지 후 애니메이션 작동.",
-    "/projects/starbucks/sb-scroll_animation.gif",
-  ],
-  hasImage: true,
-  imgSrc: [
-    "/projects/starbucks/sb-scroll_to_top.gif",
-    "/projects/starbucks/sb-slide_img.gif",
-    "/projects/starbucks/sb-youtube_video.gif",
-    "/projects/starbucks/sb-scroll_animation.gif",
   ],
 };
