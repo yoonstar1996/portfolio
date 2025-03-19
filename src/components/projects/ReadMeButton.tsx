@@ -1,5 +1,4 @@
 import { BookOpen, X } from "lucide-react";
-import React from "react";
 import {
   Dialog,
   DialogClose,
@@ -8,7 +7,9 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "../ui";
+
 import { Project } from "@/type/Project";
+import Context from "./Context";
 
 interface ReadMeButtonProps {
   project: Project;
@@ -39,64 +40,62 @@ function ReadMeButton({ project }: ReadMeButtonProps) {
               {project.title}
             </h1>
 
-            {/* 진행 날짜 */}
-            <div className="mb-5 text-sm font-medium">{project.subTitle}</div>
+            <div className="flex flex-col gap-5">
+              {/* 프로젝트 개요 */}
+              <div>
+                <h2 className="text-xl font-bold">🗒️ 프로젝트 개요</h2>
+                <div className="my-3 flex flex-col gap-[2px]">
+                  <div className="flex items-center gap-2">
+                    <div>프로젝트명:</div>
+                    <div className="text-lg font-semibold">{project.title}</div>
+                  </div>
 
-            {/* 주요 기능 */}
-            <h2 className="text-xl font-bold">📄 주요기능</h2>
-            <div className="mb-5 flex flex-col gap-2 font-medium">
-              {project.func.map((item, index) => {
-                if (item.startsWith("/")) {
-                  return (
-                    <ProjectImage
-                      key={index}
-                      src={item}
-                      alt={`image_${index}`}
-                    />
-                  );
-                } else if (item.startsWith("@")) {
-                  return <MainDesc key={index}>{item.substring(1)}</MainDesc>;
-                } else if (item.startsWith("#")) {
-                  return <SubDesc key={index}>{item.substring(1)}</SubDesc>;
-                } else if (item.startsWith("$")) {
-                  return <SubTitle key={index}>{item.substring(1)}</SubTitle>;
-                } else {
-                  return <MainTitle key={index}>{item}</MainTitle>;
-                }
-              })}
-            </div>
+                  <div className="flex items-center gap-2">
+                    <div>기간:</div>
+                    <div className="text-base font-medium text-[#4e4e4e]">
+                      {project.subTitle}
+                    </div>
+                  </div>
 
-            {/* 기술 스택 */}
-            <h2 className="text-xl font-bold">🛠️ 기술 스택</h2>
-            <div className="mb-5 self-start break-keep px-3 py-1 text-sm">
-              {project.skills}
-            </div>
-
-            {project.review && (
-              <>
-                <h2 className="mt-6 text-xl font-bold">📝 프로젝트 리뷰</h2>
-                <div className="mt-3 whitespace-pre-line rounded-lg bg-[#f5f5f5] p-4 text-gray-700">
-                  {project.review}
+                  <div className="flex gap-2">
+                    <div>목적:</div>
+                    <div className="text-base font-medium">{project.desc}</div>
+                  </div>
                 </div>
-              </>
-            )}
+              </div>
 
-            {/* 설치 및 실행 방법
-            <h2 className="mb-5 text-xl font-bold">
-              ⚙️ 프로젝트 설치 및 실행 방법
-            </h2>
-            <pre className="rounded-lg bg-[#f5f5f5] p-[1rem]">
-              <code>
-                # 의존성 설치
-                <br />
-                npm install
-                <br />
-                <br />
-                # 개발 서버 실행
-                <br />
-                npm run dev
-              </code>
-            </pre> */}
+              {/* 기술 스택 */}
+              <div>
+                <h2 className="text-xl font-bold">🛠️ 기술 스택</h2>
+                <div className="my-2 self-start break-keep">
+                  {project.skills}
+                </div>
+              </div>
+
+              {/* 주요 기능 */}
+              <Context
+                label="👨‍💻 주요 역할 및 기여"
+                project={project}
+                el="role"
+              />
+
+              {/* 문제 상황 */}
+              {project.problem.length > 0 && (
+                <Context label="❗ 문제 상황" project={project} el="problem" />
+              )}
+
+              {/* 해결 과정 */}
+              {project.solve.length > 0 && (
+                <Context label="🔎 해결 과정" project={project} el="solve" />
+              )}
+
+              {/* 성과 및 느낀 점 */}
+              <Context
+                label="🌱 성과 및 느낀 점"
+                project={project}
+                el="review"
+              />
+            </div>
           </article>
         </div>
       </DialogContent>
@@ -105,35 +104,3 @@ function ReadMeButton({ project }: ReadMeButtonProps) {
 }
 
 export default ReadMeButton;
-
-const MainTitle = ({ children }: { children: React.ReactNode }) => (
-  <h2 className="mt-3 text-xl font-bold text-black before:mr-2 before:content-['•']">
-    {children}
-  </h2>
-);
-
-const SubTitle = ({ children }: { children: React.ReactNode }) => (
-  <h3 className="mt-1 text-lg font-semibold text-gray-900">{children}</h3>
-);
-
-const MainDesc = ({ children }: { children: React.ReactNode }) => (
-  <p className="pl-4 text-gray-700 before:mr-2 before:content-['◦']">
-    {children}
-  </p>
-);
-
-const SubDesc = ({ children }: { children: React.ReactNode }) => (
-  <p className="ml-10 border-l-2 border-gray-300 pl-4 text-gray-600">
-    {children}
-  </p>
-);
-
-const ProjectImage = ({ src, alt }: { src: string; alt: string }) => (
-  <div className="my-4 flex justify-start">
-    <img
-      src={`/images/${src}`}
-      alt={alt}
-      className="max-w-md rounded-md shadow-lg"
-    />
-  </div>
-);

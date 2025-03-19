@@ -4,12 +4,15 @@ export interface Project {
   subTitle: string;
   desc: string;
   url?: string;
-  github: string;
+  github?: string;
   skills: string;
-  func: string[];
-  hasImage: boolean;
+  role: string[];
+  problem: string[];
+  solve: string[];
+  review: string[];
   imgSrc?: string[];
-  review?: string;
+  hasImage: boolean;
+  el?: "role" | "problem" | "solve" | "review";
 }
 
 export interface ProjectCardProps {

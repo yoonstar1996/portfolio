@@ -1,37 +1,33 @@
 "use client";
 
-import React from "react";
-import LinkSection from "../common/LinkSection";
-import Label from "./Label";
-import ProjectCard from "./ProjectCard";
 import {
+  ArtLogProject,
   BeermodeProject,
   CelebstarsProject,
-  ChatProject,
   DingonProject,
-  EmotionProject,
   PortfolioDemoProject,
   PortfolioProject,
   SgtProject,
-  StarbucksProject,
   WattsUpProject,
 } from "@/data/ProjectData";
+
 import { useCheckStore } from "@/store/useCheckStore";
+import LinkSection from "../common/LinkSection";
+import Label from "./Label";
+import ProjectCard from "./ProjectCard";
 
 function Projects() {
   const isChecked = useCheckStore((state) => state.isChecked);
 
   const projectList = [
+    ArtLogProject,
     PortfolioProject,
     WattsUpProject,
-    EmotionProject,
     PortfolioDemoProject,
     CelebstarsProject,
     DingonProject,
     SgtProject,
-    ChatProject,
     BeermodeProject,
-    StarbucksProject,
   ].filter((project) => !isChecked || project.isImportant);
 
   return (

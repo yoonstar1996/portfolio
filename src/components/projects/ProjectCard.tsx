@@ -1,8 +1,7 @@
-import React from "react";
-import Link from "next/link";
-import ReadMeButton from "./ReadMeButton";
 import { ProjectCardProps } from "@/type/Project";
+import Link from "next/link";
 import ImageButton from "./ImageButton";
+import ReadMeButton from "./ReadMeButton";
 
 function ProjectCard({ project }: ProjectCardProps) {
   return (
@@ -40,23 +39,26 @@ function ProjectCard({ project }: ProjectCardProps) {
           </div>
         </div>
       )}
-      <div className="mb-4 flex items-center gap-2 lg:gap-4">
-        <div className="min-w-[46px]">Github</div>
-        <div className="border-l-4 border-[#0d1117] pl-3">
-          <Link
-            href={project.github}
-            target="_blank"
-            className="break-words text-[#0d1117] hover:cursor-pointer hover:underline"
-            style={{ overflowWrap: "anywhere" }}
-          >
-            {project.github}
-          </Link>
+      {project.github && (
+        <div className="mb-4 flex items-center gap-2 lg:gap-4">
+          <div className="min-w-[46px]">Github</div>
+          <div className="border-l-4 border-[#0d1117] pl-3">
+            <Link
+              href={project.github || "#"}
+              target="_blank"
+              className="break-words text-[#0d1117] hover:cursor-pointer hover:underline"
+              style={{ overflowWrap: "anywhere" }}
+            >
+              {project.github}
+            </Link>
+          </div>
         </div>
-      </div>
+      )}
       {/* 기술 */}
       <div className="mb-4 self-start break-keep rounded-lg border border-yellow-500 bg-amber-100 px-3 py-1 text-sm">
         {project.skills}
       </div>
+
       {/* README */}
       <div className="flex gap-2">
         <ReadMeButton project={project} />
