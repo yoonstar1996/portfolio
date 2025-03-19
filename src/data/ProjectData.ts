@@ -146,7 +146,7 @@ export const CelebstarsProject = {
 export const DingonProject = {
   isImportant: false,
   title: "Dingon",
-  subTitle: "2022.10 ~ 2022.19 (5인 프로젝트 / 팀원)",
+  subTitle: "2022.10 ~ 2022.10 (5인 프로젝트 / 팀원)",
   desc: "사용자들이 자유롭게 글을 작성하고 피드백을 주고받을 수 있는 커뮤니티 서비스 구축",
   github: "https://github.com/yoonstar1996/dingon/tree/main",
   skills: "React, axios, mui, Node.js, express",
