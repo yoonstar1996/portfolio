@@ -1,3 +1,33 @@
+export const GitGoProject = {
+  isImportant: true,
+  title: "git-go",
+  subTitle: "2025.05.07 - 2025.06.05 (4인 프로젝트 / 팀원)",
+  desc: "GitHub API를 활용해 사용자의 GitHub 활동을 시각화하고, 다양한 통계 정보를 제공하는 웹 애플리케이션",
+  url: "https://git-go.co.kr",
+  github: "https://github.com/FRONT-END-BOOTCAMP-PLUS-4/git-go",
+  skills: "Next.js, Typescript, Tailwind.css, Zustand, Prisma, plate-editor",
+  roles: [],
+  problem: [],
+  solve: [],
+  review: [],
+  hasImage: false,
+};
+
+export const MoChaProject = {
+  isImportant: true,
+  title: "MoCha",
+  subTitle: "2025.04.07 - 2025.04.28 (3인 프로젝트 / 팀장)",
+  desc: "수입과 지출을 기록하고 월간 소비 패턴을 시각화할 수 있는 웹 기반 가계부 서비스입니다.",
+  // url: "https://git-go.co.kr",
+  github: "https://github.com/FRONT-END-BOOTCAMP-PLUS-4/MoCha",
+  skills: "Next.js, Typescript, Tailwind.css, Zustand, Supabase, OAuth, jwt",
+  roles: [],
+  problem: [],
+  solve: [],
+  review: [],
+  hasImage: false,
+};
+
 export const ArtLogProject = {
   isImportant: true,
   title: "전시 정보 제공 및 전시 관람 기록 서비스",
