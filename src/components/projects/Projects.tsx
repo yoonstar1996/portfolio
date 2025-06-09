@@ -5,6 +5,8 @@ import {
   BeermodeProject,
   CelebstarsProject,
   DingonProject,
+  GitGoProject,
+  MoChaProject,
   PortfolioDemoProject,
   PortfolioProject,
   SgtProject,
@@ -20,6 +22,8 @@ function Projects() {
   const isChecked = useCheckStore((state) => state.isChecked);
 
   const projectList = [
+    GitGoProject,
+    MoChaProject,
     ArtLogProject,
     PortfolioProject,
     WattsUpProject,

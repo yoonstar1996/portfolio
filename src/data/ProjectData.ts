@@ -6,10 +6,29 @@ export const GitGoProject = {
   url: "https://git-go.co.kr",
   github: "https://github.com/FRONT-END-BOOTCAMP-PLUS-4/git-go",
   skills: "Next.js, Typescript, Tailwind.css, Zustand, Prisma, plate-editor",
-  roles: [],
-  problem: [],
-  solve: [],
-  review: [],
+  role: [
+    "회고록 작성, 수정, 조회 기능의 UI 전반을 구현했습니다.",
+    "plate-editor를 기반으로 회고 에디터를 커스터마이징하고 주요 작성 기능을 담당했습니다.",
+    "다크 모드를 지원하기 위해 CSS 변수 기반의 테마 전환 기능을 구현했습니다.",
+    "회고록 작성, 수정, 삭제 API의 프론트엔드와 백엔드를 모두 구현했으며, 백엔드는 클린 아키텍처 구조로 작성했습니다.",
+    "plate-editor에서 이미지 업로드 시 AWS S3 스토리지에 저장되는 기능을 구현했습니다.",
+    "프로젝트 전체에 일관된 폰트를 적용하여 UI 완성도를 높였습니다.",
+  ],
+  problem: [
+    "에디터를 선택하는 과정에서 여러 라이브러리(tiptap, react-md-editor, plate.js)를 비교해야 했고, 각 라이브러리마다 커스텀 난이도, 화면 배치, 마크다운 지원 여부 등의 차이가 있어 판단이 어려웠습니다.",
+    "처음 plate-editor를 사용할 때 Slate 기반 구조와 플러그인 체계가 익숙하지 않아 원하는 기능 구현에 시간이 걸렸습니다.",
+    "기획 단계에서 다크 모드를 고려하지 않았지만, 프로젝트 중반 이후에 도입하게 되며 기존 스타일 구조와 충돌이 발생했습니다.",
+  ],
+  solve: [
+    "마크다운 지원, 공간 효율성, UI 심플함 등의 기준을 바탕으로 세 가지 에디터를 테스트해본 후 plate.js를 최종 선택했습니다. 공식 문서의 완성도와 커스터마이징 용이성을 종합적으로 고려했습니다.",
+    "plate-editor를 미니 프로젝트에서 먼저 실험해보며 플러그인 구조, editor.children 접근 방식 등을 익히고, 이미지 업로드, 툴바 커스터마이징 기능을 점진적으로 구현했습니다.",
+    "기존 Tailwind 구조를 유지하면서도 CSS 변수를 통해 light/dark 모드를 유연하게 전환할 수 있도록 전체 스타일을 리팩터링했습니다.",
+  ],
+  review: [
+    "UI 구현부터 editor 커스터마이징, 백엔드 API 구성까지 다양한 영역을 직접 맡아보며 프로젝트의 핵심 기능을 깊이 있게 다뤄볼 수 있었습니다.",
+    "특히 에디터 도입 전 여러 라이브러리를 비교하고, 커스터마이징을 직접 시도해보며 도구 선택과 설계 능력이 향상되었습니다.",
+    "다크 모드, S3 이미지 업로드 등 세부적인 사용자 경험을 향상시키기 위한 작업을 통해 프론트엔드 개발자로서의 완성도를 높일 수 있었습니다.",
+  ],
   hasImage: false,
 };
 
@@ -18,23 +37,40 @@ export const MoChaProject = {
   title: "MoCha",
   subTitle: "2025.04.07 - 2025.04.28 (3인 프로젝트 / 팀장)",
   desc: "수입과 지출을 기록하고 월간 소비 패턴을 시각화할 수 있는 웹 기반 가계부 서비스입니다.",
-  // url: "https://git-go.co.kr",
   github: "https://github.com/FRONT-END-BOOTCAMP-PLUS-4/MoCha",
   skills: "Next.js, Typescript, Tailwind.css, Zustand, Supabase, OAuth, jwt",
-  roles: [],
-  problem: [],
-  solve: [],
-  review: [],
+  role: [
+    "로그인/회원가입, 아이디 찾기, 비밀번호 재설정 기능의 프론트엔드 및 백엔드 전체를 전담했습니다.",
+    "Supabase를 DB로 활용하고, 인증은 Supabase Auth 대신 커스텀 방식으로 구현했습니다.",
+    "이메일 인증은 Nodemailer를 활용해 직접 인증번호를 발송하고, 인증 완료 후 회원가입을 진행하도록 구현했습니다.",
+    "Google, Kakao 소셜 로그인 기능을 OAuth 2.0 기반으로 구현하고, accessToken 발급 및 저장 로직을 구성했습니다.",
+    "백엔드는 클린 아키텍처를 적용하여 인증 관련 API를 구조적으로 설계하고 구현했습니다.",
+  ],
+  problem: [
+    "Supabase Auth를 사용하지 않고 자체 인증 로직을 구현하다 보니, 인증 흐름 설계와 보안 고려 사항에 대한 부담이 컸습니다.",
+    "소셜 로그인에서 OAuth 2.0의 redirect 흐름, JWT 발급 및 토큰 관리 방식에 대해 명확히 이해하지 못해 처음에 많은 시행착오를 겪었습니다.",
+    "accessToken과 refreshToken의 역할과 만료 처리, 재발급 흐름이 복잡하게 느껴졌고, 이를 클린 아키텍처 구조에 녹여내는 과정에서 어려움이 있었습니다.",
+  ],
+  solve: [
+    "Supabase는 사용자 관리 대신 데이터 저장 용도로만 활용하고, 인증은 자체 구현 방식으로 전환하여 구조적 일관성을 확보했습니다.",
+    "OAuth 2.0 공식 문서와 다양한 블로그를 참고하며 redirect_uri, authorization code flow, accessToken 관리 개념을 정리하고 적용했습니다.",
+    "JWT 기반 인증 플로우를 구성하며 accessToken 검증과 상태 관리 로직을 구현했고, refreshToken은 개념적으로 이해했으나 실제 적용은 추후 과제로 남겨두었습니다.",
+  ],
+  review: [
+    "직접 회원가입 및 소셜 로그인 전체 흐름을 구현해보며 인증 시스템에 대한 전반적인 이해도를 높일 수 있었습니다.",
+    "프론트엔드와 백엔드를 모두 다뤄보면서 클린 아키텍처의 실질적인 이점을 체감했고, 구조적인 코드 작성 습관을 익힐 수 있었습니다.",
+    "accessToken 처리, 인증 이메일 구현 등 실제 서비스에 필요한 기능들을 직접 구성하며 자신감을 얻었고, refreshToken은 이번에 적용하지 못했지만 다음 프로젝트에서는 꼭 도전해보고 싶습니다.",
+  ],
   hasImage: false,
 };
 
 export const ArtLogProject = {
-  isImportant: true,
+  isImportant: false,
   title: "전시 정보 제공 및 전시 관람 기록 서비스",
   subTitle: "2025.02 - 진행중 (4인 프로젝트 / 팀원)",
   desc: "사용자가 관람한 전시를 기록하고, 특정 조건 달성 시 뱃지를 수집하는 재미를 더한 기록형 서비스",
-  // url: "https://portfolio-five-beryl-94.vercel.app/",
-  github: "https://github.com/Defor721/ArtLog",
+  // url: "https://art-log.vercel.app",
+  // github: "https://github.com/Defor721/ArtLog",
   skills: "Next.js, Typescript, Tailwind.css, Zustand, React-query",
   role: [
     "현재 프론트엔드 개발자로 프로젝트에 참여 중입니다.",
@@ -148,7 +184,7 @@ export const CelebstarsProject = {
   subTitle: "2023.03 ~ 2023.08 (3인 프로젝트 / 인턴)",
   desc: "모델과 기업을 연결하는 플랫폼으로, 프로필 관리, 캐스팅, 지원자 관리 등 실질적인 구인·구직 기능 제공",
   url: "https://celebstars.co.kr",
-  github: "https://github.com/yoonstar1996/celebstars",
+  // github: "https://github.com/yoonstar1996/celebstars",
   skills: "Next.js, Typescript, Redux, styled-components",
   role: [
     "5개월간 프론트엔드 인턴으로 참여하며 실무 프로젝트에 기여했습니다.",
@@ -205,7 +241,7 @@ export const DingonProject = {
 };
 
 export const SgtProject = {
-  isImportant: true,
+  isImportant: false,
   title: "SGT Market",
   subTitle: "2022.09 ~ 2022.10 (4인 프로젝트 / 팀원)",
   desc: "사용자가 중고 물품을 자유롭게 등록, 검색, 거래할 수 있는 웹 서비스 개발",
