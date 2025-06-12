@@ -2,7 +2,7 @@ export const GitGoProject = {
   isImportant: true,
   title: "git-go",
   subTitle: "2025.05.07 - 2025.06.05 (4인 프로젝트 / 팀원)",
-  desc: "GitHub API를 활용해 사용자의 GitHub 활동을 시각화하고, 다양한 통계 정보를 제공하는 웹 애플리케이션",
+  desc: "개발자가 자신의 커밋과 PR을 기반으로 자연스럽게 회고를 작성하고, 기록할 수 있도록 돕는 개인 회고 기록 서비스",
   url: "https://git-go.co.kr",
   github: "https://github.com/FRONT-END-BOOTCAMP-PLUS-4/git-go",
   skills: "Next.js, Typescript, Tailwind.css, Zustand, Prisma, plate-editor",
