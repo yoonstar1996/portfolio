@@ -1,7 +1,6 @@
 "use client";
 
-import { Image } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Card,
   CardContent,
@@ -15,7 +14,10 @@ import {
   DialogContent,
   DialogTrigger,
 } from "../ui";
+
 import { DialogTitle } from "@radix-ui/react-dialog";
+import { Image as ImageIcon } from "lucide-react";
+import Image from "next/image";
 
 interface ImageButtonProps {
   images: string[];
@@ -42,7 +44,7 @@ function ImageButton({ images }: ImageButtonProps) {
     <Dialog>
       <DialogTrigger asChild>
         <button className="flex items-center gap-1 rounded-lg border border-[#ccc] px-3 py-1">
-          <Image size={16} />
+          <ImageIcon size={16} />
           <div className="font-semibold">{"이미지"}</div>
         </button>
       </DialogTrigger>
@@ -54,11 +56,13 @@ function ImageButton({ images }: ImageButtonProps) {
               {images.map((imgSrc, index) => (
                 <CarouselItem key={index}>
                   <Card>
-                    <CardContent className="flex aspect-square items-center justify-center p-6">
-                      <img
+                    <CardContent className="flex aspect-square items-center justify-center p-4">
+                      <Image
                         src={`/images${imgSrc}`}
                         alt={`carousel-img-${index}`}
-                        className="h-auto w-full rounded-lg shadow-md"
+                        width={286}
+                        height={286}
+                        className="h-full w-full rounded-lg object-contain shadow-md"
                       />
                     </CardContent>
                   </Card>
