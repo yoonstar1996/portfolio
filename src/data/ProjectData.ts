@@ -29,7 +29,12 @@ export const GitGoProject = {
     "특히 에디터 도입 전 여러 라이브러리를 비교하고, 커스터마이징을 직접 시도해보며 도구 선택과 설계 능력이 향상되었습니다.",
     "다크 모드, S3 이미지 업로드 등 세부적인 사용자 경험을 향상시키기 위한 작업을 통해 프론트엔드 개발자로서의 완성도를 높일 수 있었습니다.",
   ],
-  hasImage: false,
+  hasImage: true,
+  imgSrc: [
+    "/projects/git-go/gitgo-main.png",
+    "/projects/git-go/gitgo-memoir.png",
+    "/projects/git-go/gitgo-memoir_detail.png",
+  ],
 };
 
 export const MoChaProject = {
@@ -61,7 +66,14 @@ export const MoChaProject = {
     "프론트엔드와 백엔드를 모두 다뤄보면서 클린 아키텍처의 실질적인 이점을 체감했고, 구조적인 코드 작성 습관을 익힐 수 있었습니다.",
     "accessToken 처리, 인증 이메일 구현 등 실제 서비스에 필요한 기능들을 직접 구성하며 자신감을 얻었고, refreshToken은 이번에 적용하지 못했지만 다음 프로젝트에서는 꼭 도전해보고 싶습니다.",
   ],
-  hasImage: false,
+  hasImage: true,
+  imgSrc: [
+    "/projects/mocha/mocha-main.png",
+    "/projects/mocha/mocha-login.png",
+    "/projects/mocha/mocha-signup.png",
+    "/projects/mocha/mocha-find-id.png",
+    "/projects/mocha/mocha-find-pw.png",
+  ],
 };
 
 export const ArtLogProject = {
