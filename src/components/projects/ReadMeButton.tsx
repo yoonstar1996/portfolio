@@ -1,5 +1,4 @@
 import { BookOpen, X } from "lucide-react";
-
 import {
   Dialog,
   DialogClose,
@@ -10,7 +9,6 @@ import {
 } from "../ui";
 
 import { Project } from "@/type/Project";
-
 import Context from "./Context";
 
 interface ReadMeButtonProps {
@@ -122,4 +120,3 @@ function ReadMeButton({ project }: ReadMeButtonProps) {
 }
 
 export default ReadMeButton;
-

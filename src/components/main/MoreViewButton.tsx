@@ -14,4 +14,3 @@ function MoreViewButton() {
 }
 
 export default MoreViewButton;
-

@@ -1,15 +1,18 @@
 ---
+
 # 서비스 간단 소개
 
-* **기존 포트폴리오 웹사이트를 App router로 마이그레이션 했습니다.**
+- **기존 포트폴리오 웹사이트를 App router로 마이그레이션 했습니다.**
 
 ## Portfolio
-* 포트폴리오 프로젝트
-* 2025.01 ~ 2025.01
-* 사용 기술 : Next.js, Typescript, tailwind.css, zustand
+
+- 포트폴리오 프로젝트
+- 2025.01 ~ 2025.01
+- 사용 기술 : Next.js, Typescript, tailwind.css, zustand
 
 ## 제작 인원(1명)
-* 윤경민
+
+- 윤경민
 
 ## 주요 기능
 
@@ -21,6 +24,5 @@
 - **이미지 클릭 시, 캐러셀 형식으로 볼 수 있도록 제작**
 - **반응형 css 구축**
 
-    
 * 노션 링크 : https://obsidian-tapir-ca1.notion.site/Portfolio-183a823f09fa80deb3a7d6dfb2377f7a?pvs=4
 * 실제 링크 : https://portfolio-five-beryl-94.vercel.app/
