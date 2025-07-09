@@ -43,7 +43,7 @@ function ImageButton({ images }: ImageButtonProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button className="flex items-center gap-1 rounded-lg border border-[#ccc] px-3 py-1">
+        <button className="flex items-center gap-1 rounded-lg border border-[#ccc] px-3 py-1 hover:opacity-70 active:scale-[0.97]">
           <ImageIcon size={16} />
           <div className="font-semibold">{"이미지"}</div>
         </button>
