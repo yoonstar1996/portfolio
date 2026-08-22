@@ -25,4 +25,4 @@
 - **반응형 css 구축**
 
 * 노션 링크 : https://obsidian-tapir-ca1.notion.site/Portfolio-183a823f09fa80deb3a7d6dfb2377f7a?pvs=4
-* 실제 링크 : https://portfolio-five-beryl-94.vercel.app/
+* 실제 링크 : https://yoonstars-portfolio.vercel.app/
