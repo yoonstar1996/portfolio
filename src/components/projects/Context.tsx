@@ -13,8 +13,12 @@ export default function Context({ label, project, el }: ContextProps) {
       <div className="my-2">
         {project[el] &&
           project[el].map((data, index) => (
-            <div key={index} className="my-[3px] leading-6 tracking-[0.15px]">
-              {data}
+            <div
+              key={index}
+              className="my-[3px] flex gap-2 leading-6 tracking-[0.15px]"
+            >
+              <span className="shrink-0 font-bold text-black">•</span>
+              <span>{data}</span>
             </div>
           ))}
       </div>
